@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "build/web",
+        "use": "@vercel/static"
+      }
+    ],
+    "env": {
+      "FLUTTER_VERSION": "stable"
+    },
+    "build": {
+      "env": {
+        "FLUTTER_HOME": "/usr/local/flutter"
+      },
+      "command": "curl -sL https://storage.googleapis.com/download.flutter.dev/flutter_linux_v3.3.1-stable.tar.xz | tar xJf - -C /usr/local/ && flutter doctor && flutter pub get && flutter build web"
+    }
+  }
+  
